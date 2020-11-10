@@ -1,0 +1,70 @@
+<%- include('header') %>
+<div class="jumbotron" style="height:50px" >
+
+    <span style="margin-bottom:40px;">
+      <nav class="navbar navbar-expand-sm bg-light" >
+
+         <div class="container">
+           <a href="index" style="color:black; "> <div class="glyphicon glyphicon-home">
+
+           </div> </a>
+           <ul class=" nav navbar-nav navbar-left">
+
+             <li style="width:70%"><input class="form-control mr-sm-2" type="text" placeholder="Search" ></li>
+            <li> <button  type="submit" class="btn btn-warning">Search</button></li>
+           </ul>
+
+             <ul class=" nav navbar-nav navbar-right" style="margin-bottom:30px; ">
+             <li><a href="/cart"  style="color:black; "><div class="glyphicon glyphicon-shopping-cart" ></div></a></li>
+             <li ><a href="login" style="color:black">Log In</a></li>
+             <li><a href="signup"  style="color:black">Sign Up</a></li>
+           </ul>
+         </div>
+
+
+         </nav>
+    </span>
+  </div>
+<div class="container mt-5">
+  <h1>Login</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /login route -->
+          <form action="/login" method="POST">
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="Name" class="form-control" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Passwor</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+
+
+            <button type="submit" class="btn btn-dark">Login</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+     <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <a class="btn btn-block" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign In with Google
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%- include('footer') %>
